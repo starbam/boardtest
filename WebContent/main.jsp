@@ -12,15 +12,12 @@
 <title>JSP 게시판 웹 사이트</title>
 </head>
 <body>
-<!--세션 ID 설정 -->
 	<%
 		String userID = null;
 		if( session.getAttribute("userID") != null){
 			userID = (String) session.getAttribute("userID");
 		}
 	%>
-	
-	<!--메인화면 네비게이션 메뉴구성 -->
 	<nav class="navbar navbar-default">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed"
@@ -71,8 +68,6 @@
 			%>
 		</div>
 	</nav>
-	
-	<!--메인 화면 구성 -->
 	
 	<script src="https://code.jquery.com/jquery-3.1.1.min"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
