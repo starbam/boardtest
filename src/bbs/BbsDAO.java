@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
+// bbs DAO 글쓰기
 public class BbsDAO {
 
 
@@ -54,7 +54,7 @@ public class BbsDAO {
 		return -1; //데이터베이스 오류
 	}
 	
-	public int Write(String bbsTitle, String userID, String bbsContent){
+	public int write(String bbsTitle, String userID, String bbsContent){
 		String SQL ="INSERT INTO BBS VALUES(?,?,?,?,?,?);";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -64,11 +64,7 @@ public class BbsDAO {
 			pstmt.setString(4, getDate());
 			pstmt.setString(5, bbsContent);
 			pstmt.setInt(6, 1);
-			rs = pstmt.executeQuery(SQL);
-			if(rs.next()) {
-				return rs.getInt(1)+1;
-			}
-			return 1; 			
+			return pstmt.executeUpdate();
 		}catch(Exception e){
 			
 			e.printStackTrace();

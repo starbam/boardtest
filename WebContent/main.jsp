@@ -74,7 +74,7 @@
 	
 	<!--메인 화면 구성 -->
 	<div>
-	사이트 메인화면 병합후
+	
 	</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
