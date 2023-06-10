@@ -1,5 +1,5 @@
 package user;
-
+// user java bean(user테이블변수와 동일)
 public class User {
 	private String userID;
 	private String userPassword;
